@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # ✅ STEP 1: Configure Gemini
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))  # Ensure this is set in env vars
+genai.configure(api_key="AIzaSyAa5t_Q1l88N_mcNOrwhFe67AreyUe41Zg")  # Ensure this is set in env vars
 
 # Sample query
 query = "Software developer with experience in Python and backend systems."
