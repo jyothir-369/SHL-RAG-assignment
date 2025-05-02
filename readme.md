@@ -1,103 +1,199 @@
-# 🧠 SHL Generative AI Product Recommender
+🧠 SHL Generative AI Product Recommender
+This project is a smart product recommendation system developed as part of the SHL AI Intern assignment. It leverages a Retrieval-Augmented Generation (RAG) pipeline combined with an LLM-based reranking mechanism to recommend SHL assessments based on natural language job descriptions or queries.
 
-This project is a smart product recommendation system built for the SHL AI Intern assignment using a **Retrieval-Augmented Generation (RAG)** pipeline with an LLM-based reranking layer. It recommends SHL assessments based on natural language queries or job descriptions.
+🚀 Key Features
+🔍 Semantic search over SHL’s assessment catalog using FAISS
 
----
+🧠 Reranking powered by Claude 3 Haiku for improved result accuracy
 
-## 🚀 Features
+📋 Displays duration, test type, remote compatibility, adaptive support, and download availability
 
-- 🔍 Semantic Search over SHL product catalog using FAISS
-- 🧠 Claude 3 Haiku reranking for precise results
-- 📋 Duration, Test Types, Remote & Adaptive flags, Downloads
-- 🎯 Precision Mode: Top 3 accurate results based on query
-- 📦 FastAPI backend with `/recommend` endpoint
-- 🖼️ Streamlit UI for testing and interaction
-- 🧪 Bonus: Conversational RAG Chatbot (`step1_rag.py`) with Gemini / DeepSeek / LLaMA3
+🎯 Precision Mode: Retrieves the top 3 most relevant assessments
 
----
+⚙️ FastAPI backend with /recommend endpoint
 
-## 📁 Folder Structure
-```
+🖼️ Streamlit frontend for easy interaction
+
+💬 Bonus: Conversational RAG chatbot (step1_rag.py) using Gemini, DeepSeek, or LLaMA3
+
+📁 Project Structure
+bash
+Copy
+Edit
 shl-recommender/
-├── data/                    # JSON + FAISS index
-├── recommender/            # Core recommendation logic
-│   └── core.py             
-├── streamlit_app/          # Streamlit UI
-│   └── app.py              
-├── api/                    # FastAPI backend
-│   └── main.py             
-├── step1_rag.py            # Chatbot variant (multi-model)
-├── SHL_Generative_AI_Summary.pdf   # Approach document
-├── requirements.txt        # Dependencies
-├── README.md               # This file
-```
+├── data/                      # Product metadata and FAISS index
+├── recommender/              # Core recommendation logic
+│   └── core.py
+├── streamlit_app/            # Streamlit-based frontend
+│   └── app.py
+├── api/                      # FastAPI backend server
+│   └── main.py
+├── step1_rag.py              # Optional multimodal chatbot
+├── SHL_Generative_AI_Summary.pdf  # Summary report
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+🧰 Tech Stack
+Component	Tool/Library
+Embeddings	BAAI bge-small-en-v1.5
+Vector Database	FAISS
+Reranker LLM	Claude 3 Haiku (via OpenRouter)
+Frontend	Streamlit
+Backend	FastAPI
+Chatbot Models	Gemini, DeepSeek, LLaMA
+Web Scraping	Selenium + BeautifulSoup
 
----
-
-## 🧰 Tech Stack
-
-| Component      | Tool                      |
-|----------------|---------------------------|
-| Embeddings     | BAAI bge-small-en-v1.5    |
-| Vector DB      | FAISS                     |
-| LLM Reranker   | Claude 3 Haiku (OpenRouter) |
-| Frontend       | Streamlit                 |
-| Backend        | FastAPI                   |
-| Chatbot Models | Gemini, DeepSeek, LLaMA   |
-| Scraper        | Selenium + BeautifulSoup  |
-
----
-
-## 🖼️ Screenshots
-![image](https://github.com/user-attachments/assets/30c52cfa-0501-4f48-88c5-f96560812d79)
-![image](https://github.com/user-attachments/assets/cbfcb84f-d190-436a-b536-92240bb14564)
-![image](https://github.com/user-attachments/assets/f33295b0-12da-40e1-b173-29f68c40b40f)
-![image](https://github.com/user-attachments/assets/9559bdf8-6bf6-4b4c-b179-beee1a55ba40)
-
-
-
----
-
-## ▶️ How to Run Locally
-
-### 1. Install Dependencies
-```bash
+▶️ Getting Started
+1. Install Dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
-```
-
-### 2. Run Backend (API)
-```bash
+2. Launch the FastAPI Backend
+bash
+Copy
+Edit
 uvicorn api.main:app --reload
-```
-Visit: `http://localhost:8000/recommend?q=productivity manager`
+Test endpoint:
 
-### 3. Run Streamlit Frontend
-```bash
+bash
+Copy
+Edit
+http://localhost:8000/recommend?q=productivity manager
+3. Start the Streamlit UI
+bash
+Copy
+Edit
 streamlit run streamlit_app/app.py
-```
+Access frontend locally:
 
----
+Local: http://localhost:8501
 
-## 🌐 Deployment Links
+Network: http://192.168.1.16:8501
 
-| Component   | URL                  |
-|-------------|----------------------|
-| Live UI     | _Coming soon_        |
-| API Endpoint| _Coming soon_        |
-| GitHub Repo | _To be added_        |
+🌐 Deployment
+Component	URL
+Live UI	https://ragassess-shl.streamlit.app/
+API Endpoint	Coming soon
+GitHub Repo	https://github.com/jyothir-369/SHL-RAG-assignment/tree/main
 
----
+✅ Project Deliverables
+✅ Top 3 SHL product recommendations per query
 
-## ✅ Deliverables
+✅ Fully functional API and frontend
 
-- ✅ Top 3 SHL product recommendations
-- ✅ API + Frontend working demo
-- ✅ Full metadata extraction
-- ✅ RAG chatbot (optional)
-- ✅ PDF report with reasoning (`SHL_Generative_AI_Summary.pdf`)
+✅ Complete metadata presentation
 
----
+✅ Optional: Chatbot variant with multimodal support
 
-## 📬 Contact
-For feedback or questions, feel free to reach out!
+✅ Final summary document: SHL_Generative_AI_Summary.pdf
 
+📬 Contact
+For any questions, suggestions, or feedback — feel free to reach out!
+
+Would you like me to export this into a README.md file for direct use in your repo?
+
+
+
+
+
+
+
+You said:
+for contact this is my portpolio"https://jyothir-369.github.io/BJR/"
+
+
+ChatGPT said:
+Updated saved memory
+Here is the updated README with your portfolio URL for the contact section:
+
+🧠 SHL Generative AI Product Recommender
+This project is a smart product recommendation system developed as part of the SHL AI Intern assignment. It leverages a Retrieval-Augmented Generation (RAG) pipeline combined with an LLM-based reranking mechanism to recommend SHL assessments based on natural language job descriptions or queries.
+
+🚀 Key Features
+🔍 Semantic search over SHL’s assessment catalog using FAISS
+
+🧠 Reranking powered by Claude 3 Haiku for improved result accuracy
+
+📋 Displays duration, test type, remote compatibility, adaptive support, and download availability
+
+🎯 Precision Mode: Retrieves the top 3 most relevant assessments
+
+⚙️ FastAPI backend with /recommend endpoint
+
+🖼️ Streamlit frontend for easy interaction
+
+💬 Bonus: Conversational RAG chatbot (step1_rag.py) using Gemini, DeepSeek, or LLaMA3
+
+📁 Project Structure
+bash
+Copy
+Edit
+shl-recommender/
+├── data/                      # Product metadata and FAISS index
+├── recommender/              # Core recommendation logic
+│   └── core.py
+├── streamlit_app/            # Streamlit-based frontend
+│   └── app.py
+├── api/                      # FastAPI backend server
+│   └── main.py
+├── step1_rag.py              # Optional multimodal chatbot
+├── SHL_Generative_AI_Summary.pdf  # Summary report
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+🧰 Tech Stack
+Component	Tool/Library
+Embeddings	BAAI bge-small-en-v1.5
+Vector Database	FAISS
+Reranker LLM	Claude 3 Haiku (via OpenRouter)
+Frontend	Streamlit
+Backend	FastAPI
+Chatbot Models	Gemini, DeepSeek, LLaMA
+Web Scraping	Selenium + BeautifulSoup
+
+▶️ Getting Started
+1. Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+2. Launch the FastAPI Backend
+bash
+Copy
+Edit
+uvicorn api.main:app --reload
+Test endpoint:
+
+bash
+Copy
+Edit
+http://localhost:8000/recommend?q=productivity manager
+3. Start the Streamlit UI
+bash
+Copy
+Edit
+streamlit run streamlit_app/app.py
+Access frontend locally:
+
+Local: http://localhost:8501
+
+Network: http://192.168.1.16:8501
+
+🌐 Deployment
+Component	URL
+Live UI	https://ragassess-shl.streamlit.app/
+API Endpoint	Coming soon
+GitHub Repo	https://github.com/jyothir-369/SHL-RAG-assignment/tree/main
+
+✅ Project Deliverables
+✅ Top 3 SHL product recommendations per query
+
+✅ Fully functional API and frontend
+
+✅ Complete metadata presentation
+
+✅ Optional: Chatbot variant with multimodal support
+
+✅ Final summary document: SHL_Generative_AI_Summary.pdf
+
+📬 Contact
+For any questions, suggestions, or feedback — feel free to reach out via my [portfolio.](https://jyothir-369.github.io/BJR/)
