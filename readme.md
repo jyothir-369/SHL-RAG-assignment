@@ -85,4 +85,6 @@ GitHub Repo	SHL-RAG-assignment
 ✅ Final summary document: SHL_Generative_AI_Summary.pdf
 
 📬 Contact
-For questions, suggestions, or feedback, feel free to reach out via my portfolio.
+For questions, suggestions, or feedback, feel free to reach out via my portfolio:
+👉 https://jyothir-369.github.io/BJR/
+
